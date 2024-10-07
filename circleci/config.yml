@@ -1,0 +1,33 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      # Utilisation d'une image Docker avec Java 8 ou supérieur
+      - image: circleci/openjdk:8-jdk
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Configuration de Maven et de l'environnement Java
+      - run:
+          name: Setup Maven
+          command: |
+            mvn -version
+            java -version
+
+      # Exécution des tests avec Maven
+      - run:
+          name: Execute Maven tests
+          command: mvn clean test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
