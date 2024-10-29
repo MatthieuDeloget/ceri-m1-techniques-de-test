@@ -27,13 +27,13 @@ public class IPokedexTest {
 	
 	@Before
 	public void setUp() {
-		// The Mock(tm)'s mocked friends
-		metadataProvider = mock(IPokemonMetadataProvider.class);
-		pokemonFactory = mock(IPokemonFactory.class);
-		// The Mock(tm)
 		pokedex = mock(IPokedex.class);
 		
-		// Pokemon examples
+		// Nécessaires pour le fonctionnement de la classe
+		metadataProvider = mock(IPokemonMetadataProvider.class);
+		pokemonFactory = mock(IPokemonFactory.class);
+		
+		// Pokémons
 		bulbizarreMetadata = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
 		bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
 		
@@ -47,6 +47,9 @@ public class IPokedexTest {
 			when(metadataProvider.getPokemonMetadata(133)).thenReturn(aqualiMetadata);
 		} catch (PokedexException e) {}
 		when(pokemonFactory.createPokemon(0, 613, 64, 4000, 4)).thenReturn(bulbizarre);
+		when(pokemonFactory.createPokemon(133, 2729, 202, 5000, 4)).thenReturn(aquali);
+		when(pokedex.addPokemon(bulbizarre)).thenReturn(0);
+		when(pokedex.addPokemon(aquali)).thenReturn(133);
 		
 		// Add pokemons to the list
 		pokemonList = new ArrayList<>();
@@ -67,7 +70,7 @@ public class IPokedexTest {
 	}
 	
 	@Test
-	public void testGetPokemon(int id) throws PokedexException {
+	public void testGetPokemon() throws PokedexException {
 		PokemonMetadata metadata = metadataProvider.getPokemonMetadata(0);
 		assertNotNull(metadata);
         assertEquals(0, metadata.getIndex());
@@ -78,7 +81,7 @@ public class IPokedexTest {
 	}
 	
 	@Test(expected = PokedexException.class)
-	public void testGetPokemonInvalidIndex(int id) throws PokedexException {
+	public void testGetPokemonInvalidIndex() throws PokedexException {
 		when(pokedex.getPokemon(-702)).thenThrow(new PokedexException("Invalid index"));
 		pokedex.getPokemon(-702);
 	}

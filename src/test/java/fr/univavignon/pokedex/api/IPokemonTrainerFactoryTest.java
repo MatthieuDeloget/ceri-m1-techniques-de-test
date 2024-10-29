@@ -19,36 +19,31 @@ public class IPokemonTrainerFactoryTest {
         pokedexFactory = Mockito.mock(IPokedexFactory.class);
         IPokedex mockPokedex = Mockito.mock(IPokedex.class);
 
-        // Define the behavior of pokemonTrainerFactory to return a PokemonTrainer with a mock Pokedex
-        Mockito.when(pokemonTrainerFactory.createTrainer("lorem", Team.MYSTIC, pokedexFactory)) .thenReturn(new PokemonTrainer("lorem", Team.MYSTIC, mockPokedex));
+        Mockito.when(pokemonTrainerFactory.createTrainer("Sacha", Team.MYSTIC, pokedexFactory)) .thenReturn(new PokemonTrainer("Sacha", Team.MYSTIC, mockPokedex));
     }
 
     @Test
     public void testCreateTrainer() {
-        PokemonTrainer trainer = pokemonTrainerFactory.createTrainer("Ash", Team.MYSTIC, pokedexFactory);
+        PokemonTrainer sacha = pokemonTrainerFactory.createTrainer("Sacha", Team.MYSTIC, pokedexFactory);
 
-        // Vérifier si le trainer n'est pas NULL
-        assertNotNull(trainer);
-
-        assertEquals("Ash", trainer.getName());
-        assertEquals(Team.MYSTIC, trainer.getTeam());
+        assertNotNull(sacha);
+        assertEquals("Sacha", sacha.getName());
+        assertEquals(Team.MYSTIC, sacha.getTeam());
     }
 
     @Test
     public void testTrainerHasPokedex() {
-        // Create a trainer using the factory
-        PokemonTrainer trainer = pokemonTrainerFactory.createTrainer("Ash", Team.MYSTIC, pokedexFactory);
+        PokemonTrainer sacha = pokemonTrainerFactory.createTrainer("Sacha", Team.MYSTIC, pokedexFactory);
 
         // Verify that the trainer's pokedex is not null
-        assertNotNull(trainer.getPokedex());
+        assertNotNull(sacha.getPokedex());
     }
 
     // Test if PokemonTrainer creation does not throw exceptions
     @Test
     public void testCreateTrainerWithoutException() {
         try {
-            // Try creating a PokemonTrainer
-            PokemonTrainer trainer = pokemonTrainerFactory.createTrainer("Ash", Team.MYSTIC, pokedexFactory);
+            PokemonTrainer sacha = pokemonTrainerFactory.createTrainer("Sacha", Team.MYSTIC, pokedexFactory);
         } catch (Exception e) {
             fail("Cet entraîneur est valide et ne devrait pas causer d'exceptions.");
         }

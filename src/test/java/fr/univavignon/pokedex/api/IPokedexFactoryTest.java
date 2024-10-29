@@ -47,12 +47,10 @@ public class IPokedexFactoryTest {
     @Test
     public void testAddPokemonToPokedex() throws PokedexException {
         IPokedex pokedex = pokedexFactory.createPokedex(metadataProvider, pokemonFactory);
+
+		Pokemon bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
         
-        // Mock création de Pokémon de PokemonFactory
-        Pokemon pokemon = Mockito.mock(Pokemon.class);
-        Mockito.when(pokedex.addPokemon(pokemon)).thenReturn(0);
-        
-        int index = pokedex.addPokemon(pokemon);
+        int index = pokedex.addPokemon(bulbizarre);
         assertEquals(0, index);
     }
 }

@@ -18,8 +18,8 @@ public class IPokemonFactoryTest {
         metadata = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
         
         // Mock pour création de pokémon
-        Pokemon pokemon = new Pokemon(0, "Bulbizarre", 613, 64, 4000, 4, 56, 126, 126, 90);
-        Mockito.when(pokemonFactory.createPokemon(0, 613, 64, 4000, 4)).thenReturn(pokemon);
+        Pokemon bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
+        Mockito.when(pokemonFactory.createPokemon(0, 613, 64, 4000, 4)).thenReturn(bulbizarre);
     }
 
     // Test if PokemonFactory creates a Pokemon with correct attributes
@@ -38,7 +38,8 @@ public class IPokemonFactoryTest {
         assertEquals(64, pokemon.getHp());
         assertEquals(4000, pokemon.getDust());
         assertEquals(4, pokemon.getCandy());
-        assertEquals(56, pokemon.getIv(), 0.01);  // Allow small delta for double comparison
+        // Afin de ne pas avoir de bugs liés aux erreurs d'arrondissement des floats des ordinateurs, on ajoute une marge d'erreur de 0.01
+        assertEquals(56, pokemon.getIv(), 0.01);
     }
 
     // Test if the metadata for the Pokemon is correct
