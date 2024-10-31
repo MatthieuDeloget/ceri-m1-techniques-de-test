@@ -1,8 +1,16 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
+Matthieu Deloget
+Master IA parcours classique, première année
+
+## Outils et plateformes utilisés
+CircleCI pour la mise en place de l'intégration continue
+ChatGPT pour écrire la première version des tests et du TP3
+CodeCov pour l'indicateur de pertinence requis pour le TP4
+
 
 ## Introduction
 
-Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
+Vous allez à travers ces projets mettre en application une partie des aspects évoqués en cours vis-à-vis des techniques de tests.  
 Pour cela nous allons réaliser un projet logiciel de petite taille, en suivant la roadmap suivante : 
 - Setup du projet
 - Mise en place des outils d’intégration continue
@@ -22,7 +30,7 @@ Le dossier `src` contient la définition de l'ensemble des interfaces qui seront
 
 ## Rendus
 
-Le rendu des TPs se fait au rythme suivant :
+Le rendu des TPs se fait idéalement au rythme suivant :
 
 - TP1 : 2ème séance
 - TP2 : 2ème séance
@@ -30,6 +38,15 @@ Le rendu des TPs se fait au rythme suivant :
 - TP4 : 5ème séance
 - TP5 : dernière séance
 - TP6 : dernière séance
+
+Voici comment je vais m'y prendre :
+
+- TP1 : Dès que j'apprends ce qu'est un tag sur GitHub
+- TP2 : Dès que j'apprends ce qu'est un tag sur GitHub
+- TP3 : Dès que j'apprends ce qu'est un tag sur GitHub
+- TP4 : En même temps que TP3
+- TP5 : Incertain
+- TP6 : Dernière séance
 
 Pour chaque rendu vous devez créer un tag à partir du commit qui correspond à la complétion du TP.  
 Si vous ne spécifiez pas de tag, le dernier commit à la date-heure de la fin de séance sera celui considéré.
