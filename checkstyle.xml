@@ -13,7 +13,6 @@
         </module>
         <module name="JavadocMethod">
             <property name="allowMissingParamTags" value="false"/>
-            <property name="allowMissingThrowsTags" value="false"/>
         </module>
 
         <!-- Checks for line length limits -->
