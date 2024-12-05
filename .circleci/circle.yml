@@ -2,9 +2,9 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:17-jdk  # Utilisation de Java 8
+      - image: cimg/openjdk:17.0
     steps:
-      - checkout  # Récupère le code source du dépôt
+      - checkout
       - run:
           name: Run Maven
           command: mvn clean test
