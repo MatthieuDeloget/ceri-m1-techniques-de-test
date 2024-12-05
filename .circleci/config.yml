@@ -38,4 +38,3 @@ workflows:
   upload-to-codecov:
     jobs:
       - build
-      - codecov/upload
