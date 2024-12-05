@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # Utilisation d'une image Docker avec Java 8 ou supérieur
-      - image: circleci/openjdk:8-jdk
+      - image: circleci/openjdk:17-jdk
 
     working_directory: ~/repo
 
