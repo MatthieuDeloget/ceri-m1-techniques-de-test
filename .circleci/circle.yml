@@ -2,27 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:8-jdk  # Utilisation de Java 8
+      - image: circleci/openjdk:17-jdk  # Utilisation de Java 8
     steps:
       - checkout  # Récupère le code source du dépôt
       - run:
-          name: Install Maven
-          command: |
-            curl -s https://repo1.maven.org/maven2/org/apache/maven/apache-maven/3.6.3/apache-maven-3.6.3-bin.tar.gz | tar -xz -C /opt/
-            echo 'export PATH=/opt/apache-maven-3.6.3/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
-      - run:
-          name: Run tests
+          name: Run Maven
           command: mvn clean test
-	  - run:
-          name: Generate JaCoCo Report
-          command: mvn jacoco:report
-	  - store_artifacts:
-          path: target/site/jacoco
-          destination: jacoco
-	  - run:
-	      name: Upload to Codecov
-	      command: bash <(curl -s https://codecov.io/bash)
 
 workflows:
   version: 2
