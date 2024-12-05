@@ -5,8 +5,7 @@ orbs:
 
 jobs:
   build:
-    docker:
-      # Utilisation d'une image Docker avec Java 8 ou supérieur
+    docker:*
       - image: circleci/openjdk:17-jdk
 
     working_directory: ~/repo
@@ -14,23 +13,19 @@ jobs:
     steps:
       - checkout
 
-      # Configuration de Maven et de l'environnement Java
       - run:
           name: Setup Maven
           command: |
             mvn -version
             java -version
-
-      # Exécution des tests avec Maven
       - run:
           name: Execute Maven tests
           command: mvn clean test
       - run:
-            name: Generate JaCoCo Report
-            command: mvn jacoco:report
-      - store_artifacts:
-            path: target/site/jacoco
-            destination: jacoco
+          name: Generate JaCoCo Report
+          command: mvn jacoco:report
+      - codecov/report:
+          file: target/site/jacoco/jacoco.xml
       - run:
           name: Upload to Codecov
           command: bash <(curl -s https://codecov.io/bash)
