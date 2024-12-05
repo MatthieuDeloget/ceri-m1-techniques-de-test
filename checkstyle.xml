@@ -4,21 +4,19 @@
     "https://checkstyle.org/dtds/configuration_1_3.dtd">
 
 <module name="Checker">
-    <!-- TreeWalker is the main module for code analysis -->
-    <module name="TreeWalker">
+    <!-- Checks for line length limits -->
+    <module name="LineLength">
+        <property name="max" value="120"/>
+        <property name="severity" value="warning"/>
+    </module>
 
+    <module name="TreeWalker">
         <!-- Enforces Javadoc for public classes and methods -->
         <module name="JavadocType">
             <property name="severity" value="warning"/>
         </module>
         <module name="JavadocMethod">
             <property name="allowMissingParamTags" value="false"/>
-        </module>
-
-        <!-- Checks for line length limits -->
-        <module name="LineLength">
-            <property name="max" value="120"/>
-            <property name="severity" value="warning"/>
         </module>
 
         <!-- Enforces whitespace rules -->
@@ -48,6 +46,5 @@
             <property name="groups" value="java,javax,org,com"/>
             <property name="ordered" value="true"/>
         </module>
-
     </module>
 </module>
