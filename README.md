@@ -2,11 +2,15 @@
 Matthieu Deloget
 Master IA parcours classique, première année
 
+## Badges
+Badge CircleCI: [![CircleCI](https://dl.circleci.com/status-badge/img/gh/MatthieuDeloget/ceri-m1-techniques-de-test/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/MatthieuDeloget/ceri-m1-techniques-de-test/tree/master)
+
+Badge Covecov: [![codecov](https://codecov.io/gh/MatthieuDeloget/ceri-m1-techniques-de-test/graph/badge.svg?token=OII6KR5NUY)](https://codecov.io/gh/MatthieuDeloget/ceri-m1-techniques-de-test)
+
 ## Outils et plateformes utilisés
 CircleCI pour la mise en place de l'intégration continue
 ChatGPT pour écrire la première version des tests et du TP3
 CodeCov pour l'indicateur de pertinence requis pour le TP4
-
 
 ## Introduction
 
@@ -20,13 +24,7 @@ Pour cela nous allons réaliser un projet logiciel de petite taille, en suivant 
 - Documentation et conventions de style
 - Test d'une implémentation donnée
 
-Durant cette série de TPs, le gestionnaire de version Git sera utilisé à foison, à travers la plateforme GitHub. Si vous n’êtes pas à l’aise avec cet outil[^1], [voici](http://rogerdudler.github.io/git-guide/) un petit guide à garder sous la main.
-
-## Sujets
-
-L'ensemble des sujets de TPs peut être trouvé dans le dossier `TPs`.
-
-Le dossier `src` contient la définition de l'ensemble des interfaces qui seront l'objet de vos travaux.
+Durant cette série de TPs, le gestionnaire de version Git sera utilisé à foison, à travers la plateforme GitHub. Si vous n’êtes pas à l’aise avec cet outil, [voici](http://rogerdudler.github.io/git-guide/) un petit guide à garder sous la main.
 
 ## Rendus
 
@@ -39,16 +37,9 @@ Le rendu des TPs se fait idéalement au rythme suivant :
 - TP5 : dernière séance
 - TP6 : dernière séance
 
-Voici comment je vais m'y prendre :
+Voici comment j'ai complété les TPs :
 
-- TP1 : Dès que j'apprends ce qu'est un tag sur GitHub
-- TP2 : Dès que j'apprends ce qu'est un tag sur GitHub
-- TP3 : Dès que j'apprends ce qu'est un tag sur GitHub
-- TP4 : En même temps que TP3
-- TP5 : Incertain
-- TP6 : Dernière séance
-
-Pour chaque rendu vous devez créer un tag à partir du commit qui correspond à la complétion du TP.  
-Si vous ne spécifiez pas de tag, le dernier commit à la date-heure de la fin de séance sera celui considéré.
-
-[^1]: Si vous n’êtes vraiment pas à l’aise avec cet outil nous vous conseillons quand même vivement de vous y mettre.
+- TP1 : Première séance
+- TP2 : Deuxième séance
+- TP3 : Troisième séance
+- TP4 : Cinquième séance (j'ai placé tous les tags ici)
