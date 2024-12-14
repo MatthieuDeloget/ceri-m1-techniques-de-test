@@ -23,16 +23,17 @@ public class IPokemonTrainerFactoryTest {
     }
 
     @Test
-    public void testCreateTrainer() {
+    public void createTrainerTest() {
         PokemonTrainer sacha = pokemonTrainerFactory.createTrainer("Sacha", Team.MYSTIC, pokedexFactory);
 
         assertNotNull(sacha);
         assertEquals("Sacha", sacha.getName());
         assertEquals(Team.MYSTIC, sacha.getTeam());
+        assertEquals(Team.MYSTIC, Team.INSTINCT);
     }
 
     @Test
-    public void testTrainerHasPokedex() {
+    public void trainerHasPokedexTest() {
         PokemonTrainer sacha = pokemonTrainerFactory.createTrainer("Sacha", Team.MYSTIC, pokedexFactory);
 
         // Verify that the trainer's pokedex is not null

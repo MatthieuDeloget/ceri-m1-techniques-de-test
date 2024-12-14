@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Run Maven
-          command: mvn clean test
+          command: mvn clean test verify
 
 workflows:
   version: 2
