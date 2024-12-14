@@ -49,7 +49,6 @@
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
-                        <phase>test</phase>
                     </execution>
 
                     <execution>
@@ -61,7 +60,7 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>

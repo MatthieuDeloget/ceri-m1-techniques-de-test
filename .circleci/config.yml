@@ -18,6 +18,7 @@ jobs:
           command: |
             mvn -version
             java -version
+            prepare-agent
       - run:
           name: Execute Maven tests
           command: mvn clean test
