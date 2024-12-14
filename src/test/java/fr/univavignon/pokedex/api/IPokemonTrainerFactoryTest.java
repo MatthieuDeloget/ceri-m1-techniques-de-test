@@ -29,7 +29,6 @@ public class IPokemonTrainerFactoryTest {
         assertNotNull(sacha);
         assertEquals("Sacha", sacha.getName());
         assertEquals(Team.MYSTIC, sacha.getTeam());
-        assertEquals(Team.MYSTIC, Team.INSTINCT);
     }
 
     @Test
