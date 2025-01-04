@@ -6,6 +6,10 @@ public class PokemonFactory implements IPokemonFactory {
 
     private PokemonMetadataProvider pokemonMetadataProvider;
 
+    public PokemonFactory(PokemonMetadataProvider pokemonMetadataProvider) {
+        this.pokemonMetadataProvider = pokemonMetadataProvider;
+    }
+
     @Override
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
         try {

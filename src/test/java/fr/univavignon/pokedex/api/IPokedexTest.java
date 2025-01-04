@@ -1,12 +1,10 @@
 package fr.univavignon.pokedex.api;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -32,6 +30,7 @@ public class IPokedexTest {
 		// Nécessaires pour le fonctionnement de la classe
 		metadataProvider = mock(IPokemonMetadataProvider.class);
 		pokemonFactory = mock(IPokemonFactory.class);
+		
 		
 		// Pokémons
 		bulbizarreMetadata = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);

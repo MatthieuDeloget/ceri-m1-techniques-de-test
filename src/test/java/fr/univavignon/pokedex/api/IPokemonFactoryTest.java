@@ -8,14 +8,10 @@ import static org.junit.Assert.*;
 public class IPokemonFactoryTest {
 
     private IPokemonFactory pokemonFactory;
-    private PokemonMetadata metadata;
 
     @Before
     public void setUp() {
         pokemonFactory = Mockito.mock(IPokemonFactory.class);
-        
-        // Metadata du pokémon
-        metadata = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
         
         // Mock pour création de pokémon
         Pokemon bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);

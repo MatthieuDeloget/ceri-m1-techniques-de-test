@@ -2,10 +2,6 @@ package fr.univavignon.pokedex.api;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
-
-import fr.univavignon.pokedex.api.Pokemon;
-import fr.univavignon.pokedex.api.PokemonComparators;
 
 import static org.junit.Assert.*;
 
@@ -40,7 +36,6 @@ public class PokemonComparatorsTest {
     public void testCompareCP() {
         assertEquals(Integer.compare(bulbizarre.getCp(), aquali.getCp()) ,PokemonComparators.CP.compare(bulbizarre, aquali));
     }
-    
 }
 
 
