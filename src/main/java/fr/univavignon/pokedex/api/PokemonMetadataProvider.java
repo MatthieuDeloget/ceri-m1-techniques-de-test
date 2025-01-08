@@ -25,7 +25,6 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 
     /**
      * Reads metadata from a CSV file and populates the metadata map.
-     * @param csvFile Path to the CSV file containing the Pokémon metadata.
      * @throws IOException if there is an error reading the file.
      */
     private void initializeMetadata() throws IOException {

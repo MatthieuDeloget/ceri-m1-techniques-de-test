@@ -16,17 +16,17 @@ public class PokemonFactory implements IPokemonFactory {
             PokemonMetadata metadata = pokemonMetadataProvider.getPokemonMetadata(index);
 
             Random randomGenerator = new Random();
-            int attack_iv = randomGenerator.nextInt(16);
-            int defense_iv = randomGenerator.nextInt(16);
-            int stamina_iv = randomGenerator.nextInt(16);
-            double iv = (attack_iv + defense_iv + stamina_iv)*45/100;
+            int attackIV = randomGenerator.nextInt(16);
+            int defenseIV = randomGenerator.nextInt(16);
+            int staminaIV = randomGenerator.nextInt(16);
+            double iv = (attackIV + defenseIV + staminaIV) * 45 / 100;
 
             return new Pokemon(
                 index, 
                 metadata.getName(), 
-                metadata.getAttack() + attack_iv, 
-                metadata.getDefense() + defense_iv,
-                metadata.getStamina() + stamina_iv, 
+                metadata.getAttack() + attackIV, 
+                metadata.getDefense() + defenseIV,
+                metadata.getStamina() + staminaIV, 
                 cp, 
                 hp, 
                 dust, 

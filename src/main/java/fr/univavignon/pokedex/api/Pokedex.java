@@ -1,10 +1,9 @@
 package fr.univavignon.pokedex.api;
 
-
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import java.util.ArrayList;
 
 public class Pokedex implements IPokedex {
 
@@ -12,7 +11,7 @@ public class Pokedex implements IPokedex {
     private IPokemonFactory pokemonFactory;
     private IPokemonMetadataProvider metadataProvider;
 
-    public Pokedex(IPokemonMetadataProvider metadataProvider, IPokemonFactory pokemonFactory){
+    public Pokedex(IPokemonMetadataProvider metadataProvider, IPokemonFactory pokemonFactory) {
         this.knownPokemons = new ArrayList<Pokemon>();
         this.pokemonFactory = pokemonFactory;
         this.metadataProvider = metadataProvider;

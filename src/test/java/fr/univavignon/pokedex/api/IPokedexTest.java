@@ -78,18 +78,15 @@ public class IPokedexTest {
         assertEquals(126, metadata.getDefense());
         assertEquals(90, metadata.getStamina());
 	}
-	
+
 	@Test(expected = PokedexException.class)
 	public void testGetPokemonInvalidIndex() throws PokedexException {
 		when(pokedex.getPokemon(-702)).thenThrow(new PokedexException("Invalid index"));
 		pokedex.getPokemon(-702);
 	}
-	
+
 	@Test
 	public void testGetPokemons() {
 		assertEquals(pokemonList, pokedex.getPokemons());
 	}
-	
-	
-	
 }
